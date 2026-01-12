@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "reactApp1/*": ["src/remotes.d.ts"],
+      "reactApp2/*": ["src/remotes.d.ts"],
+      "vueApp/*": ["src/remotes.d.ts"]
+    }
+  },
+  "include": ["src/**/*"]
+}
+

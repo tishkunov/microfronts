@@ -1,0 +1,35 @@
+{
+  "name": "@microfrontends/shared",
+  "version": "1.0.0",
+  "description": "Shared libraries for microfrontends",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint src --ext .ts,.tsx",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "vue": "^3.3.8"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "microfrontends",
+    "module-federation",
+    "shared",
+    "design-tokens"
+  ]
+}
+
+

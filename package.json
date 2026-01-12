@@ -1,0 +1,14 @@
+{
+  "name": "microfrontends-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd host && npm install && cd ../react-app1 && npm install && cd ../react-app2 && npm install && cd ../vue-app && npm install",
+    "dev": "concurrently \"npm run dev --workspace=host\" \"npm run dev --workspace=react-app1\" \"npm run dev --workspace=react-app2\" \"npm run dev --workspace=vue-app\"",
+    "build": "npm run build --workspace=host && npm run build --workspace=react-app1 && npm run build --workspace=react-app2 && npm run build --workspace=vue-app"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+

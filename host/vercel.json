@@ -1,0 +1,21 @@
+{
+  "buildCommand": "cd host && npm install && npm run build",
+  "outputDirectory": "host/dist",
+  "installCommand": "cd host && npm install",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/remoteEntry.js",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    }
+  ]
+}
+
+
+

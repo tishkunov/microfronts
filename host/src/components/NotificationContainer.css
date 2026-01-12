@@ -1,0 +1,76 @@
+.notification-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+}
+
+.notification {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  font-weight: 600;
+  animation: slideInRight 0.3s ease, slideOutRight 0.3s ease 2.7s;
+  border-left: 4px solid #666;
+}
+
+.notification-success {
+  border-left-color: #4CAF50;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.notification-error {
+  border-left-color: #f44336;
+  background: #ffebee;
+  color: #c62828;
+}
+
+.notification-warning {
+  border-left-color: #ff9800;
+  background: #fff3cd;
+  color: #856404;
+}
+
+.notification-info {
+  border-left-color: #2196F3;
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .notification-container {
+    left: 20px;
+    right: 20px;
+    max-width: none;
+  }
+}
+
